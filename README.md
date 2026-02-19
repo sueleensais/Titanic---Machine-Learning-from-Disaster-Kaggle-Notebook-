@@ -178,6 +178,11 @@ O objetivo foi construir um **baseline simples** e funcional.
 
 Em versões futuras, serão aplicadas técnicas de imputação e engenharia de features para lidar com colunas como `Age`, `Cabin` e `Embarked`, que possuem valores ausentes e podem contribuir para melhorar a performance do modelo.
 
+# **Próximos Passos**
+
+- Tratar valores ausentes em `Age`, `Cabin` e `Embarked`.
+- Incluir novas features.
+- Testar outros algoritmos (Logistic Regression, XGBoost, LightGBM).
 
 
 
