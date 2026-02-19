@@ -1,10 +1,10 @@
-📘 **Titanic - Machine Learning from Disaster**
+# 📘 **Titanic - Machine Learning from Disaster**
 
-#**Descrição:**
+# **Descrição:**
 
 Este projeto utiliza o dataset “*Titanic - Machine Learning from Disaster”* do Kaggle para prever quais passageiros tinham maior probabilidade de sobreviver ao naufrágio. É um desafio clássico de aprendizado de máquina, ideal para iniciantes em ciência de dados.
 
-#**Dicionário de Dados:**
+# **Dicionário de Dados:**
 
 → Arquivo `train.csv`
 
@@ -27,7 +27,7 @@ Mesma estrutura do `train.csv`, **exceto pela ausência da coluna `Survived`**, 
 
 # **Passo a passo**
 
-##**Importação de bibliotecas numpy e pandas:**
+## **Importação de bibliotecas numpy e pandas:**
 
 ```python
 import numpy as np
@@ -35,7 +35,7 @@ import pandas as pd
 import os
 ```
 
-##**Verificação dos arquivos disponíveis:**
+## **Verificação dos arquivos disponíveis:**
 
 ```python
 for dirname, _, filenames in os.walk('/kaggle/input/competitions/titanic/'):
@@ -43,14 +43,14 @@ for filename in filenames:
 print(os.path.join(dirname, filename))
 ```
 
-##**Carregamento dos dados:**
+## **Carregamento dos dados:**
 
 ```python
 train_data = pd.read_csv('/kaggle/input/competitions/titanic/train.csv')
 test_data = pd.read_csv('/kaggle/input/competitions/titanic/test.csv')
 ```
 
-##**Exploração inicial dos dados:**
+## **Exploração inicial dos dados:**
 
 in:
 
@@ -86,7 +86,7 @@ out:
 
 O método `.head()` do **pandas** mostra, por padrão, as **primeiras 5 linhas** do DataFrame. O dataset contém **891 linhas no `train.csv`** e **418 linhas no `test.csv`**.
 
-#**Análise inicial: taxa de sobrevivência por gênero** 
+# **Análise inicial: taxa de sobrevivência por gênero** 
 
 in:
 
@@ -115,7 +115,7 @@ Com a análise inicial, verificamos que aproximadamente **74% das mulheres** sob
 
 Esse resultado reflete a política de evacuação da época (“mulheres e crianças primeiro”), mostrando que o gênero foi um fator determinante. No entanto, essa análise se baseia em apenas uma coluna (`Sex`). 
 
-#**Primeiro modelo de Machine Learning: Random Forest**
+# **Primeiro modelo de Machine Learning: Random Forest**
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -152,7 +152,7 @@ output.to_csv('submission.csv', index=False)
 print("Your submission was successfully saved!")
 ```
 
-#**Resultados da submissão:**
+# **Resultados da submissão:**
 
 Após treinar o primeiro modelo de Machine Learning (Random Forest), foi gerado o arquivo `submission.csv` e enviado para a competição **Titanic - Machine Learning from Disaster** no Kaggle.
 
@@ -168,7 +168,7 @@ Outros fatores como **classe socioeconômica (Pclass)**, **idade (Age)** e **nú
 
 Para capturar esses padrões mais complexos, devem ser utilizadas técnicas de **aprendizado de máquina**, que permitem analisar múltiplas variáveis simultaneamente e gerar previsões mais precisas.
 
-#**Nota sobre valores ausentes**
+# **Nota sobre valores ausentes**
 
 Neste primeiro modelo não foi realizado tratamento de valores ausentes.
 
@@ -177,5 +177,6 @@ A escolha se deve ao fato de que as variáveis utilizadas (`Pclass`, `Sex`, `Sib
 O objetivo foi construir um **baseline simples** e funcional.
 
 Em versões futuras, serão aplicadas técnicas de imputação e engenharia de features para lidar com colunas como `Age`, `Cabin` e `Embarked`, que possuem valores ausentes e podem contribuir para melhorar a performance do modelo.
+
 
 
