@@ -4,6 +4,31 @@
 
 Este projeto utiliza o dataset “*Titanic - Machine Learning from Disaster”* do Kaggle para prever quais passageiros tinham maior probabilidade de sobreviver ao naufrágio. É um desafio clássico de aprendizado de máquina, ideal para iniciantes em ciência de dados.
 
+# **Contexto histórico**
+
+- **Data:** Na noite de 14 de abril de 1912, o Titanic colidiu com um iceberg no Atlântico Norte e afundou nas primeiras horas do dia 15.
+- **Local:** Aproximadamente 640 km a leste da Ilha de Terra Nova, no Canadá.
+- **Passageiros e tripulação:** Cerca de 2.224 pessoas estavam a bordo.
+- **Mortes:** 1.502 pessoas perderam a vida, tornando-se uma das maiores tragédias marítimas da época.
+
+# **O Desafio:**
+
+O naufrágio do Titanic é um dos mais infames da história.
+
+Em 15 de abril de 1912, durante sua viagem inaugural, o RMS Titanic, amplamente considerado "inafundável", afundou após colidir com um iceberg. Infelizmente, não havia botes salva-vidas suficientes para todos a bordo, resultando na morte de 1.502 dos 2.224 passageiros e tripulantes.
+
+Embora houvesse um elemento de sorte envolvido na sobrevivência, parece que alguns grupos de pessoas tinham maior probabilidade de sobreviver do que outros.
+
+Neste desafio, pedimos que você construa um modelo preditivo que responda à pergunta: "que tipos de pessoas tinham maior probabilidade de sobreviver?", usando dados de passageiros (ou seja, nome, idade, sexo, classe socioeconômica, etc.).
+
+# **Dados**
+
+`train.csv`: Conterá os detalhes de um subconjunto dos passageiros a bordo (891, para ser exato) e, o que é mais importante, revelará se eles sobreviveram ou não, também conhecido como a "verdade fundamental".
+
+`test.csv`: Conjunto de dados contém informações semelhantes, mas não revela a "verdade fundamental" para cada passageiro. Sua tarefa é prever esses resultados.
+
+Usando os padrões encontrados nos `train.csv` dados, previ se os outros 418 passageiros a bordo (encontrados em `test.csv`) sobreviveram.
+
 # **Dicionário de Dados:**
 
 → Arquivo `train.csv`
@@ -183,6 +208,7 @@ Em versões futuras, serão aplicadas técnicas de imputação e engenharia de f
 - Tratar valores ausentes em `Age`, `Cabin` e `Embarked`.
 - Incluir novas features.
 - Testar outros algoritmos (Logistic Regression, XGBoost, LightGBM).
+
 
 
 
